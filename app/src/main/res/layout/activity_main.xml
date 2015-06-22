@@ -17,7 +17,7 @@
         android:text="http://android-er.blogspot.com/"
         android:textStyle="bold" />
 
-    <com.example.androidaudiovisualizer.VisualizerView
+    <com.ithinkbest.visualizer00.VisualizerView
         android:id="@+id/myvisualizerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
