@@ -1,88 +1,76 @@
 package com.ithinkbest.visualizer00;
 
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.media.audiofx.Visualizer;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
-/*
- * Copy test.mp3 to /res/raw/ folder
- *
- * needed in AndroidManifest.xml
- * android:minSdkVersion="9"
- * uses-permission of "android.permission.RECORD_AUDIO"
- *
- * reference: Android demo example -
- * ApiDemos > Media > AudioTx
- */
 
 public class MainActivity extends ActionBarActivity {
-
-    VisualizerView mVisualizerView;
-
-    private MediaPlayer mMediaPlayer;
-    private Visualizer mVisualizer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mVisualizerView = (VisualizerView) findViewById(R.id.myvisualizerview);
-
-        initAudio();
     }
 
     @Override
-    protected void onPause() {
-        super.onPause();
-        if (isFinishing() && mMediaPlayer != null) {
-            mVisualizer.release();
-            mMediaPlayer.release();
-            mMediaPlayer = null;
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
         }
+
+        return super.onOptionsItemSelected(item);
     }
 
-    private void initAudio() {
-        setVolumeControlStream(AudioManager.STREAM_MUSIC);
-        mMediaPlayer = MediaPlayer.create(this, R.raw.test);
-
-        setupVisualizerFxAndUI();
-        // Make sure the visualizer is enabled only when you actually want to
-        // receive data, and
-        // when it makes sense to receive data.
-        mVisualizer.setEnabled(true);
-        // When the stream ends, we don't need to collect any more data. We
-        // don't do this in
-        // setupVisualizerFxAndUI because we likely want to have more,
-        // non-Visualizer related code
-        // in this callback.
-        mMediaPlayer
-                .setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    public void onCompletion(MediaPlayer mediaPlayer) {
-                        mVisualizer.setEnabled(false);
-                    }
-                });
-        mMediaPlayer.start();
+    public void onClickBtn1(View view) {
+//        Toast.makeText(this, "to launch " + getResources().getString(R.string.btn1),
+//                Toast.LENGTH_SHORT).show();
+        Intent intent=new Intent(this,VisualizerActivity.class);
+        startActivity(intent);
 
     }
 
-    private void setupVisualizerFxAndUI() {
-
-        // Create the Visualizer object and attach it to our media player.
-        mVisualizer = new Visualizer(mMediaPlayer.getAudioSessionId());
-        mVisualizer.setCaptureSize(Visualizer.getCaptureSizeRange()[1]);
-        mVisualizer.setDataCaptureListener(
-                new Visualizer.OnDataCaptureListener() {
-                    public void onWaveFormDataCapture(Visualizer visualizer,
-                                                      byte[] bytes, int samplingRate) {
-                        mVisualizerView.updateVisualizer(bytes);
-                    }
-
-                    public void onFftDataCapture(Visualizer visualizer,
-                                                 byte[] bytes, int samplingRate) {
-                    }
-                }, Visualizer.getMaxCaptureRate() / 2, true, false);
+    public void onClickBtn2(View view) {
+        Toast.makeText(this, "to launch " + getResources().getString(R.string.btn2),
+                Toast.LENGTH_SHORT).show();
     }
+
+    public void onClickBtn3(View view) {
+        Toast.makeText(this, "to launch " + getResources().getString(R.string.btn3),
+                Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickBtn4(View view) {
+        Toast.makeText(this, "to launch " + getResources().getString(R.string.btn4),
+                Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickBtn5(View view) {
+        Toast.makeText(this, "to launch " + getResources().getString(R.string.btn5),
+                Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickBtn6(View view) {
+        Toast.makeText(this, "to launch " + getResources().getString(R.string.btn6),
+                Toast.LENGTH_SHORT).show();
+    }
+
 
 }

@@ -7,19 +7,106 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.androidaudiovisualizer.MainActivity" >
+    tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:autoLink="web"
-        android:text="http://android-er.blogspot.com/"
-        android:textStyle="bold" />
+        android:layout_gravity="center"
+        android:text="@string/app_name"
+        android:textAppearance="@android:style/TextAppearance.Large" />
 
-    <com.ithinkbest.visualizer00.VisualizerView
-        android:id="@+id/myvisualizerview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/activity_margin_left"
+
+        android:layout_marginRight="@dimen/activity_margin_left"
+        android:layout_marginTop="@dimen/activity_margin_top"
+        android:background="#F08C35"
+android:onClick="onClickBtn1"
+
+        android:text="@string/btn1"
+        android:textAppearance="@android:style/TextAppearance.Medium" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/activity_margin_left"
+        android:layout_marginRight="@dimen/activity_margin_left"
+        android:onClick="onClickBtn2"
+
+        android:layout_marginTop="@dimen/activity_margin_top"
+        android:background="#F08C35"
+        android:text="@string/btn2"
+        android:textAppearance="@android:style/TextAppearance.Medium" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:onClick="onClickBtn3"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/activity_margin_left"
+
+        android:layout_marginRight="@dimen/activity_margin_left"
+        android:layout_marginTop="@dimen/activity_margin_top"
+        android:background="#F08C35"
+        android:text="@string/btn3"
+        android:textAppearance="@android:style/TextAppearance.Medium" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:onClick="onClickBtn4"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/activity_margin_left"
+        android:layout_marginRight="@dimen/activity_margin_left"
+
+        android:layout_marginTop="@dimen/activity_margin_top"
+
+        android:background="#F08C35"
+        android:text="@string/btn4"
+        android:textAppearance="@android:style/TextAppearance.Medium" />
+
+    <Button
+        android:id="@+id/btn5"
+        android:onClick="onClickBtn5"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/activity_margin_left"
+        android:layout_marginRight="@dimen/activity_margin_left"
+
+        android:layout_marginTop="@dimen/activity_margin_top"
+
+        android:background="#F08C35"
+        android:text="@string/btn5"
+        android:textAppearance="@android:style/TextAppearance.Medium" />
+
+    <Button
+        android:id="@+id/btn6"
+        android:onClick="onClickBtn6"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/activity_margin_left"
+        android:layout_marginRight="@dimen/activity_margin_left"
+
+        android:layout_marginTop="@dimen/activity_margin_top"
+
+        android:background="#D50000"
+        android:text="@string/btn6"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="#FFF" />
 
 </LinearLayout>

@@ -3,4 +3,12 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="btn_play">Play</string>
+
+    <string name="btn1">Visualizer</string>
+    <string name="btn2">SCORES APP</string>
+    <string name="btn3">LIBRARY APP</string>
+    <string name="btn4">BUILD IT BIGGER</string>
+    <string name="btn5">XYZ READER</string>
+    <string name="btn6">CAPSTONE: MY OWN APP</string>
 </resources>
