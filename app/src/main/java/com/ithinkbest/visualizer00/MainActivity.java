@@ -42,19 +42,24 @@ public class MainActivity extends ActionBarActivity {
     public void onClickBtn1(View view) {
 //        Toast.makeText(this, "to launch " + getResources().getString(R.string.btn1),
 //                Toast.LENGTH_SHORT).show();
-        Intent intent=new Intent(this,VisualizerActivity.class);
+        Intent intent = new Intent(this, VisualizerActivity.class);
         startActivity(intent);
 
     }
 
     public void onClickBtn2(View view) {
-        Toast.makeText(this, "to launch " + getResources().getString(R.string.btn2),
-                Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "to launch " + getResources().getString(R.string.btn2),
+//                Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(this, CaptureAudioActivity.class);
+        startActivity(intent);
     }
 
     public void onClickBtn3(View view) {
-        Toast.makeText(this, "to launch " + getResources().getString(R.string.btn3),
-                Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "to launch " + getResources().getString(R.string.btn3),
+//                Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, VoiceActivity.class);
+        startActivity(intent);
     }
 
     public void onClickBtn4(View view) {
