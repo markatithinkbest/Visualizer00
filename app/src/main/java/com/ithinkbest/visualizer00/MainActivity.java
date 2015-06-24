@@ -63,8 +63,10 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void onClickBtn4(View view) {
-        Toast.makeText(this, "to launch " + getResources().getString(R.string.btn4),
-                Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "to launch " + getResources().getString(R.string.btn4),
+//                Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, TextToSpeechActivity.class);
+        startActivity(intent);
     }
 
     public void onClickBtn5(View view) {

@@ -33,6 +33,10 @@
             android:name=".VoiceActivity"
             android:label="@string/title_activity_voice" >
         </activity>
+        <activity
+            android:name=".TextToSpeechActivity"
+            android:label="@string/title_activity_text_to_speech" >
+        </activity>
     </application>
 
 </manifest>
